@@ -1,0 +1,747 @@
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  height: 100%;
+}
+
+#home {
+  background-image: url("img/home-imobiliaria.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 60vw;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1; /* Fazer o menu se sobrepor. Agora os outros elementos não vão passar por cima do menu!!! :) */
+  width: 100%;
+  background: #44a0ff;
+  box-shadow: 0.2vw 0vw 0.3vw black;
+  padding: 0.5vw;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0.1vw 0 0 black;
+}
+
+.menu-logo {
+  display:flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.svg-casa svg {
+  color: #ffffff54;
+  width: 4vw;
+  height: 4vw;
+}
+
+.svg-casa :hover {
+  color: #ffffff;
+}
+
+.menu-nome {
+  font-size: 2.8vw;
+  font-weight: bold;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  text-shadow: 0.1vw 0 0 black;
+}
+
+.menu-nome::first-letter {
+  font-size: 3.5vw;
+  color: #e3aa84;
+}
+
+.menu-nav li {
+  padding: 1vw;
+  align-items: center;
+}
+
+.menu-nav li :hover {
+  background: #62afff;
+}
+
+.menu-nav a {
+  font-size: 1.5vw;
+  padding: 1vw;
+  font-weight: bold;
+}
+
+.titulo-h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 0.5vw;
+}
+
+.titulo-h1 h1 {
+  background: /*#44a0ff*/ #58aaffba;
+  padding: 1vw;
+  color: white;
+  writing-mode: vertical-rl;
+  font-weight: bolder;
+  font-size: 2vw;
+  text-transform: uppercase;
+  height: 50vw;
+  border: 0.4vw dotted white;
+}
+
+#lancamentos {
+  display: flex;
+  justify-content: space-between;
+  height: 58vw;
+  background: linear-gradient(#82bfff, white);
+}
+
+/*----------------------------------*/
+/*     Efeito simples de slides     */
+.content {
+  width: 86%;
+  height: 40vw;
+  box-shadow: 0.1vw 0.5vw 1vw;
+  overflow: hidden;
+  position: absolute;
+  top: 67vw;
+  left: 70%;
+  transform: translate(-70%);
+}
+
+.nav-slide {
+  position: absolute;
+  top: 1vw;
+  left: 2vw;
+  transform: translate(-2%);
+  display: flex;
+}
+
+.nav-slide label {
+  border: 0.5vw solid white;
+  box-shadow: 0.1vw 0.5vw 1vw black;
+  width: 1vw;
+  height: 1vw;
+  margin: 1vw;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav-slide :hover {
+  background: white;
+  transition: 0.3s;
+}
+
+.content input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.slide {
+  width: 30%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+}
+ 
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -30%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -90%;
+}
+/*------------------------------------------*/
+
+.info-dos-lancamentos {
+  position: absolute;
+  bottom: 0vw;
+  width: 98%;
+  height: 6.5vw;
+  background: #fcfcfc91;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  padding: 1vw;
+  border: 0.2vw solid;
+}
+
+.primeira-parte :first-child {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin-bottom: 1vw;
+}
+
+.primeira-parte :nth-child(2) {
+  font-size: 1.8vw;
+  font-style: italic;
+}
+
+.segunda-parte-info {
+  display: flex;
+}
+
+.info-banheiros, .info-quartos, .info-vagas {
+  display: flex;
+  font-size: 1.5vw;
+  margin: 0vw 1.5vw;
+  align-items: center;
+}
+
+.info-banheiros svg, .info-quartos svg, .info-vagas svg {
+  width: 2vw;
+  height: 2vw;
+  padding: 0.5vw;
+}
+
+.segunda-parte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.segunda-parte .info-venda {
+  font-size: 1.7vw;
+  font-weight: bold;
+}
+
+#compre {
+  height: 90vw;
+  display: flex;
+  background: linear-gradient(white, #82bfff)
+}
+
+.compra-imoveis {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw 4vw;
+  margin: 5vw 0;
+}
+
+.compra-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 0.1vw solid black;
+  height: 33vw;
+  padding-bottom: 1vw;
+  overflow: hidden;  /******/
+}
+
+.compra-item :hover {
+  cursor: pointer;
+}
+
+#compre .img-imovel img {
+  width: 25vw;
+}
+
+.compra-item:hover .img-imovel {  /******/
+  transform: scale(1.15);
+}
+
+.informacoes {
+  font-size: 1.5vw;
+  width: 20vw;
+  color: black;
+  line-height: 1.5vw;
+}
+
+.informacoes .primeira {
+  font-weight: bold;
+  font-size: 1.8vw;
+  color: gray;
+  margin: 0.7vw 0;
+}
+
+.informacoes span {
+  font-weight: bold;
+}
+
+.icon-informacoes {
+  display: flex;
+  margin: 1vw 0;
+  justify-content: space-between;
+}
+
+.icon-informacoes p {
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.informacoes .info-banheiros, .informacoes .info-quartos, .informacoes .info-vagas {
+    margin: 0;
+}
+
+.icon-informacoes svg {
+  width: 2vw;
+  height: 2vw;
+}
+
+#anuncie {
+  height: 70vw;
+  display: flex;
+  background-image: url("img/fundo-apart.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.anuncio-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.titulos-anuncio {
+  font-size: 3vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 4vw;
+  margin-top: 10vw;
+  padding-left: 3vw;
+  text-shadow: 0.1vw 0.5vw 1vw black;
+}
+
+.titulos-anuncio h2 {
+  font-size: 4vw;
+  color: red;
+  font-weight: bolder;
+}
+
+.form-contato {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.form-contato form {
+  width: 36vw;
+  padding: 2vw;
+  font-weight: bold;
+  text-shadow: 0.1vw 0.5vw 1vw black;
+}
+
+.form-contato form p {
+  text-align: center;
+  padding: 1vw;
+  font-size: 2vw;
+  color: white;
+}
+
+.form-contato .form-dados input {
+  padding: 1.5vw;
+  font-size: 1.3vw;
+  background: #ffffffa1;
+  outline: none;
+  border: 0.1vw solid black;
+}
+
+.form-contato .form-dados input::placeholder {
+  color: #9a7651;
+  font-style: italic;
+}
+
+.form-contato form label {
+  color: white;
+}
+
+.botao-enviar {
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.botao-enviar input {
+  padding: 0.7vw;
+  width: 15vw;
+  background: #9a7651;
+  font-size: 1.8vw;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.botao-enviar :hover {
+  background: #6e5143;
+}
+
+#alugue {
+  height: 90vw;
+  display: flex;
+  background: linear-gradient(#82bfff, white);
+}
+
+.alugar-imoveis {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw 4vw;
+  margin: 5vw 0;
+}
+
+.alugar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 0.1vw solid black;
+  height: 33vw;
+  padding-bottom: 1vw;
+}
+
+.alugar-item :hover {
+  cursor: pointer;
+}
+
+#alugue .img-imovel img {
+  width: 25vw;
+}
+
+.barra-de-categorias {
+  display: flex;
+  justify-content: space-around;
+  margin: 5vw 1vw;
+
+  /* position: sticky;
+  top: 0; */
+}
+
+.categoria div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vw;
+  border: 0.4vw dotted #ffffff;
+  background: #e39f73;
+}
+
+.categoria svg {
+  width: 6vw;
+  height: 6vw;
+  padding: 1vw;
+  color: white;
+  filter: drop-shadow(0.1vw 0.5vw 0.2vw #00000054);
+}
+
+.categoria p {
+  font-size: 2vw;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.2vw #00000054;
+}
+
+.categoria div :hover {
+  cursor: pointer;
+}
+
+#cadastre-se {
+  height: 70vw;
+  background-image: url("img/papel_de_parede_anuncio.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cadastro-pergunta {
+  font-size: 3vw;
+  position: absolute;
+  top: 394vw;
+  left: 20vw;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.svg-cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+.svg-cadastro svg {
+  color: #44a0ff;
+  width: 8vw;
+  height: 8vw;
+}
+
+.formulario-cadastro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+#cadastre-se form {
+  width: 40vw;
+  height: 50vw;
+  align-items: center;
+  padding: 1vw;
+  background: #ffffff8c;
+  border: 0.5vw solid #44a0ff;
+}
+
+.form-dados {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6vw;
+}
+
+.form-dados label {
+  font-size: 1.8vw;
+  margin: 0 0 0.2vw 0.2vw;
+}
+
+label span {
+  color: red;
+}
+
+.form-dados input {
+  padding: 0.8vw;
+  font-size: 1.2vw;
+  outline: none;
+  border: 0.1vw solid black;
+}
+
+.form-dados input::placeholder {
+  color: #e39a6a;
+}
+
+#telefone , #celular , #cidade {
+  width: 16vw;
+}
+
+.cel-e-tel , .cidade-e-uf {
+  display: flex;
+  justify-content: space-between;
+}
+
+#uf {
+  width: 18vw;
+  padding: 0.8vw;
+  font-size: 1.2vw;
+  outline: none;
+  border: 0.1vw solid black;
+  background: white;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+select:invalid {
+  color: #e39a6a;
+}
+
+.botao-cadastro {
+  display: flex;
+  justify-content: center;
+  margin: 1vw;
+}
+
+.botao-cadastro input {
+  font-size: 2vw;
+  padding: 1vw;
+  width: 15vw;
+  background: white;
+  color: #44a0ff;
+  border: 0.2vw solid #44a0ff;
+  font-weight: bold;
+}
+
+.botao-cadastro :hover {
+  color: white;
+  background: #44a0ff;
+  cursor: pointer;
+}
+
+#noticia {
+  display: flex;
+  justify-content: space-between;
+  height: 110vw;
+  background: linear-gradient(white, #82bfff, #44a0ff);
+}
+
+#noticia .titulo-h1 h1 {
+  height: 70vw;
+}
+
+.campo-text-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-noticia {
+  background: #f9ceb0;
+  width: 30vw;
+  height: 17vw;
+  color: black;
+  text-align: center;
+  padding: 2vw;
+  line-height: 2vw;
+  margin: 2vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.4vw dotted white;
+  border-right: none;
+}
+
+.text-noticia h3 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline overline;
+}
+
+.text-noticia h3 + p {
+  font-size: 1.7vw;
+}
+
+.text-noticia p {
+  font-size: 1.2vw;
+}
+
+.botao-ver-mais {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.veja-mais-noticia {
+  color: #e49662de;
+  background: white;
+  padding: 1vw;
+  font-size: 1vw;
+  font-weight: bold;
+  border-radius: 0.5vw;
+  border: none;
+  box-shadow: 0.1vw 0.1vw 0.2vw black;
+}
+
+.botao-ver-mais :hover {
+  color: white;
+  background: #e49662de;
+  width: 10vw;
+  transition: 0.5s;
+  text-shadow: 0.1vw 0vw 0.1vw black;
+  cursor: pointer;
+}
+
+.noticia-img img {
+  width: 50vw;
+  margin: 2vw 0;
+  box-shadow: 0.1vw 0.5vw 1vw black;
+}
+
+.noticia-img img {
+  -webkit-filter: grayscale(80%);
+  transition: 0.5s;
+}
+
+.noticia-img :hover{
+  -webkit-filter: grayscale(0%);
+  cursor: pointer;
+}
+
+footer {
+  margin: 0;
+}
+  
+.copyright {
+  text-align: center;
+  padding: 2vw 0;
+  font-size: 1vw;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.1vw black;
+  background: #44a0ff;
+}
+
+.copyright span {
+  cursor: pointer;
+}
+
+.div-topo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-topo .topo {
+  position: fixed;
+  top: 40vw;
+  padding: 1vw 1.5vw;
+  color: white;
+  font-size: 2.3vw;
+  text-shadow: 0.1vw 0.1vw 0.1vw black;
+  background: #7ebdff9c;
+  border-radius: 0.5vw;
+  box-shadow: 0.1vw 0.1vw 0.1vw black;
+  border: 0.1vw solid white;
+  margin-right: 1vw;
+}
+
+.div-topo :hover {
+  background: #4893e39e;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 1.6vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 1vw;
+  height: 5vw;
+  border: 0.3vw solid #44a0ff;
+}
+
+::-webkit-scrollbar-track {
+    background: #44a0ff;
+}
