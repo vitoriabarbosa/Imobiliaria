@@ -1,7 +1,4 @@
-/* Código para o SCROLL SUAVE - Autor: G. Vanz - Projeto de Landding Page - League */
-
 var menu = document.querySelector(".menu");
-
 const menuLinks = document.querySelectorAll('a[href^="#"]');
 
 function getDistanceFromTheTop(element) {
