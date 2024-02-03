@@ -1,684 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Happy House</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="./img/home-smile-solid-24.png" type="image/x-icon">
+    <title>Happy House</title>
 
-  <!-- Links CSS -->
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="reset.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-  <!-- Boxicons CSS -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Links CSS -->
+    <link href="styles/home.css" rel="stylesheet" />
+    <link href="styles/main-section.css" rel="stylesheet" />
+    <link href="styles/releases.css" rel="stylesheet" />
+    <link href="styles/register.css" rel="stylesheet" />
+    <link href="styles/news-footer.css" rel="stylesheet" />
+    <link href="styles/reset.css" rel="stylesheet" />
+
+    <!-- Libs animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-  <header id="home">
-    <nav class="menu">
-      <div class="menu-logo">
-        <div class="svg-casa">
-          <svg xmlns="http://www.w3.org/2000/svg" class="animate__animated animate__bounce animate__infinite" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"></path>
-            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"></path>
-          </svg>
-        </div>         
-        <div class="menu-nome">
-          <a href="#" onmouseenter="mostrarMensagem()">Happy House</a>
-        </div> 
-      </div>      
-      <ul class="menu-nav">  
-        <li><a href="#lancamentos">Lançamentos</a></li>
-        <li><a href="#compre">Compre</a></li>
-        <li><a href="#anuncie">Anuncie</a></li>
-        <li><a href="#alugue">Alugue</a></li>
-        <li><a href="#cadastre-se">Cadastre-se</a></li>
-      </ul>
-    </nav>   
-  </header>
-
-  <main>
-    <section id="lancamentos">
-      <div class="titulo-h1">
-        <h1>Lançamentos</h1>
-      </div>
-
-      <div class="content">
-        <div class="slides">         
-          <input type="radio" name="slide" id="slide1" checked/>
-          <input type="radio" name="slide" id="slide2"/>
-          <input type="radio" name="slide" id="slide3"/>
-          <input type="radio" name="slide" id="slide4"/>
-
-          <div class="slide s1">
-            <img src="img/lancamento/casa.jpg" alt="casa"/>           
-            <div class="info-dos-lancamentos">
-              <div class="primeira-parte">
-                <p>Casa - Brasília</p>
-                <p>Casa com 3 dormitórios à venda, 200m² por R$ 1.800.000,00</p>
-              </div>
-              
-              <div class="segunda-parte">
-                <div class="segunda-parte-info">
-                  <div class="info-banheiros">
-                    <i class='bx bxs-bath'></i><p>3</p>
-                  </div>                
-                  <div class="info-quartos">
-                    <i class='bx bxs-hotel'></i><p>3</p>
-                  </div>            
-                  <div class="info-vagas">
-                    <i class='bx bxs-car' undefined ></i><p>2</p>
-                  </div>
+    <header id="home">
+        <nav class="navigation">
+            <div class="logo">
+                <div class="logo-home">
+                    <i onclick="scrollToTop()" class='bx bxs-home-smile animate__animated animate__bounce animate__infinite'></i>
                 </div>
-
-                <div class="info-venda">
-                  <i class='bx bx-money' style='color:#0c8e22'  ></i>
-                  <p>Venda R$ 1.800.000,00</p>
+                <div class="logo-name">
+                    <a href="#" onmouseenter="showMessage()">Happy House</a>
                 </div>
-              </div>
             </div>
-          </div>
-      
-          <div class="slide">
-            <img src="img/lancamento/lancamento-apart.jpeg" alt="casa"/>
-            <div class="info-dos-lancamentos">
-              <div class="primeira-parte">
-                <p>Apartamento - São Paulo</p>
-                <p>Apartamento com 2 dormitórios, 110m² à venda por R$ 1.500.000,00</p>
-              </div>
-              
-              <div class="segunda-parte">
-                <div class="segunda-parte-info">
-                  <div class="info-banheiros">
-                    <i class='bx bxs-bath'></i><p>2</p>
-                  </div>                
-                  <div class="info-quartos">
-                    <i class='bx bxs-hotel'></i><p>2</p>
-                  </div>            
-                  <div class="info-vagas">
-                    <i class='bx bxs-car' undefined ></i><p>2</p>
-                  </div>
-                </div>
+            <ul class="nav-list">
+                <li><a href="#releases">Lançamentos</a></li>
+                <li><a href="#buy">Compre</a></li>
+                <li><a href="#announcement">Anuncie</a></li>
+                <li><a href="#rent">Alugue</a></li>
+                <li><a href="#register">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <div class="info-venda">
-                  <p>Venda R$ 1.500.000,00</p>
-                </div>
-              </div>
-            </div>            
-          </div>
-      
-          <div class="slide">
-            <img src="img/lancamento/apart-manaira-jp.jpg" alt="casa"/>
-            <div class="info-dos-lancamentos">
-              <div class="primeira-parte">
-                <p>Apartamento - Paraíba</p>
-                <p>Apartamento com 3 dormitórios, 150m² à venda por R$ 1.690.000,00</p>
-              </div>
-              
-              <div class="segunda-parte">
-                <div class="segunda-parte-info">
-                  <div class="info-banheiros">
-                    <i class='bx bxs-bath'></i><p>3</p>
-                  </div>                
-                  <div class="info-quartos">
-                    <i class='bx bxs-hotel'></i><p>3</p>
-                  </div>            
-                  <div class="info-vagas">
-                    <i class='bx bxs-car' undefined ></i><p>2</p>
-                  </div>
+    <main>
+        <section id="releases">
+            <span class="side-title"><h1>Lançamentos</h1></span>
+
+            <div class="content">
+                <div class="slides">
+                    <input type="radio" name="slide" id="slide1" checked />
+                    <input type="radio" name="slide" id="slide2" />
+                    <input type="radio" name="slide" id="slide3" />
+                    <input type="radio" name="slide" id="slide4" />
+
+                    <div class="slide s1">
+                        <img src="img/lancamento/casa.jpg" alt="casa" />
+                        <div class="release-information">
+                            <div class="slide-about">
+                                <h3>Casa - Brasília</h3>
+                                <p>Casa com 3 dormitórios à venda, 200m² por R$ 1.800.000,00</p>
+                            </div>
+                            <div class="slide-details">
+                                <div class="rooms">
+                                    <span><i class='bx bxs-bath'></i>3</span>
+                                    <span><i class='bx bxs-hotel'></i>3</span>
+                                    <span><i class='bx bxs-car'></i>2</span>
+                                </div>
+                                <p>Venda R$ 1.800.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/lancamento/lancamento-apart.jpeg" alt="casa" />
+                        <div class="release-information">
+                            <div class="slide-about">
+                                <h3>Apartamento - São Paulo</h3>
+                                <p>Apartamento com 2 dormitórios, 110m² à venda por R$ 1.500.000,00</p>
+                            </div>
+                            <div class="slide-details">
+                                <div class="rooms">
+                                    <span><i class='bx bxs-bath'></i>2</span>
+                                    <span><i class='bx bxs-hotel'></i>2</span>
+                                    <span><i class='bx bxs-car'></i>1</span>
+                                </div>
+                                <p>Venda R$ 1.500.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/lancamento/apart-manaira-jp.jpg" alt="casa" />
+                        <div class="release-information">
+                            <div class="slide-about">
+                                <h3>Apartamento - Paraíba</h3>
+                                <p>Apartamento com 3 dormitórios, 150m² à venda por R$ 1.690.000,00</p>
+                            </div>
+                            <div class="slide-details">
+                                <div class="rooms">
+                                    <span><i class='bx bxs-bath'></i>3</span>
+                                    <span><i class='bx bxs-hotel'></i>3</span>
+                                    <span><i class='bx bxs-car'></i>2</span>
+                                </div>
+                                <p>Venda R$ 1.690.000,00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/lancamento/casas-ecológicas-sustentáveis.jpeg" alt="casa" />
+                        <div class="release-information">
+                            <div class="slide-about">
+                                <h3>Casa - Rio de Janeiro</h3>
+                                <p>Casa Ecológica Sustentável com 5 dormitórios, 250m² à venda por R$ 3.890.000,00</p>
+                            </div>
+                            <div class="slide-details">
+                                <div class="rooms">
+                                    <span><i class='bx bxs-bath'></i>3</span>
+                                    <span><i class='bx bxs-hotel'></i>5</span>
+                                    <span><i class='bx bxs-car'></i>2</span>
+                                </div>
+                                <p>Venda R$ 3.890.000,00</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="info-venda">
-                  <p>Venda R$ 1.690.000,00</p>
+                <div class="nav-slide">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
                 </div>
-              </div>
             </div>
-          </div>
-
-          <div class="slide">
-            <img src="img/lancamento/casas-ecológicas-sustentáveis.jpeg" alt="casa"/>
-            <div class="info-dos-lancamentos">
-              <div class="primeira-parte">
-                <p>Casa - Rio de Janeiro</p>
-                <p>Casa Ecológica Sustentável com 5 dormitórios, 250m² à venda por R$ 3.890.000,00</p>
-              </div>
-              
-              <div class="segunda-parte">
-                <div class="segunda-parte-info">
-                  <div class="info-banheiros">
-                    <i class='bx bxs-bath'></i><p>5</p>
-                  </div>                
-                  <div class="info-quartos">
-                    <i class='bx bxs-hotel'></i><p>5</p>
-                  </div>            
-                  <div class="info-vagas">
-                    <i class='bx bxs-car'></i><p>3</p>
-                  </div>
-                </div>
-
-                <div class="info-venda">
-                  <p>Venda R$ 3.890.000,00</p>
-                </div>
-              </div>
-            </div>
-          </div>        
-        </div>
-        
-          <div class="nav-slide">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-            <label for="slide4"></label>
-          </div>
-      </div>
-    </section>     
-                  
-    <section id="compre">
-      <div class="titulo-h1">
-        <h1>Compre</h1>
-      </div>
-
-      <div class="compra-imoveis">          
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item.jpg" alt="Apartamento" title="Apartamento à venda"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">Rio de Janeiro - RJ</p>
-              <p>Apartamento com 3 Quartos à Venda, 150 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>3</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>3</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 350.000</span></p>
-              <p>Condomíno: <span>R$ 550</span></p>
-            </div>
-          </div>
-    
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item1.jpg" alt="Apartamento" title="Apartamento à venda"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">Cabo Frio - RJ</p>
-              <p>Apartamento com 2 Quartos à Venda, 85 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>2</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 420.000</span></p>
-              <p>Condomíno: <span>R$ 480</span></p>
-            </div>
-          </div>
-        
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item2.jpg" alt="Casa" title="Casa em condomínio à venda"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">Belo Horizonte - MG</p>
-              <p>Casa de condomínio com 3 Quartos à Venda, 189 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>3</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>3</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 1.050.000</span></p>
-              <p>Condomíno: <span>R$ 1.100</span></p>
-            </div>
-          </div>
-
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item3.jpg" alt="Apartamento" title="Apartamento à venda"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">Campo Belo - SP</p>
-              <p>Apartamento com Quarto à Venda, 75 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>1</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 937.000</span></p>
-              <p>Condomíno: <span>R$ 1.067</span></p>
-            </div>
-          </div>
-
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item4.jpg" alt="Apartamento" title="Apartamento à venda"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">Barra da Tijuca - RJ</p>
-              <p>Apartamento com 2 Quartos à Venda, 110 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>2</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>2</p>
-                </div>
-              </div>
-              <p><span>R$ 1.049.000</span></p>
-              <p>Condomíno: <span>R$ 1.075</span></p>
-            </div>
-          </div>
-
-          <div class="compra-item">
-            <div class="img-imovel">
-              <img src="img/compra/compra-item5.jpg" alt="Casa" title="Casa em condomínio"/>
-            </div>
-            <div class="informacoes">
-              <p class="primeira">São Paulo - SP</p>
-              <p>Apartamento com Quarto à Venda, 60 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>1</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 399.900</span></p>
-              <p>Condomíno: <span>R$ 640</span></p>
-            </div>            
-          </div>
-        </div>          
-    </section>
-    
-    <section id="anuncie">
-          <div class="titulo-h1">
-            <h1>Anuncie</h1>
-          </div>
-          <div class="anuncio-conteudo">
-            <div class="titulos-anuncio">
-              <h2>Quer anunciar seu imóvel?</h2>
-              <p>A Happy House te ajuda a divulgá-lo! :)</p>
-            </div>
-            <div class="form-contato">
-              <form>
-                <p>Entre em contato com a gente!</p>
-                <div class="form-dados">
-                  <label for="nome">Nome: <span>*</span></label>
-                  <input id="nome" type="text" maxlength="50" placeholder="Insira seu Nome" required/>
-                </div>
-        
-                <div class="form-dados">
-                  <label for="email">E-mail: <span>*</span></label>
-                  <input id="email" type="email" maxlength="50" placeholder="Insira seu E-mail" required/>
-                </div>
-    
-                <div class="botao-enviar">
-                <input type="submit" name="enviar" value="Enviar"/>
-              </form>
-            </div>
-          </div>
         </section>
-    
-    <section id="alugue">
-      <div class="titulo-h1">
-        <h1>Alugue</h1>
-      </div>
 
-      <div class="alugar-imoveis">
-        
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item.jpg" alt="Apartamento" title="Apartamento para Aluguel"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">Novo Hamburgo - RJ</p>
-              <p>Apartamento com 2 Quartos para Aluguel, 57 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>1</p>
+        <section id="buy">
+            <span class="side-title"><h1>Compre</h1></span>
+
+            <div class="buy-property">
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item.jpg" alt="Apartamento" title="Apartamento à venda" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Rio de Janeiro - RJ</h4>
+                        <p>Apartamento com 3 Quartos à Venda, 150 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>3</span>
+                            <span><i class='bx bxs-hotel'></i>3</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 350.000</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 550</span></p>
+                    </div>
                 </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item1.jpg" alt="Apartamento" title="Apartamento à venda" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Cabo Frio - RJ</h4>
+                        <p>Apartamento com 2 Quartos à Venda, 85 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>2</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 420.000</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 480</span></p>
+                    </div>
                 </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item2.jpg" alt="Casa" title="Casa em condomínio à venda" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Belo Horizonte - MG</h4>
+                        <p>Casa de condomínio com 3 Quartos à Venda, 189 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>3</span>
+                            <span><i class='bx bxs-hotel'></i>3</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 1.050.000</span></p>
+                        <!-- <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 1.100</span></p> -->
+                    </div>
                 </div>
-              </div>
-              <p><span>R$ 1.100/mês</span></p>
-              <p>Condomíno: <span>R$ 254</span></p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item3.jpg" alt="Apartamento" title="Apartamento à venda" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Campo Belo - SP</h4>
+                        <p>Apartamento com Quarto à Venda, 75 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>1</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 937.000</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 1.067</span></p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item4.jpg" alt="Apartamento" title="Apartamento à venda" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Barra da Tijuca - RJ</h4>
+                        <p>Apartamento com 2 Quartos à Venda, 110 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>2</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>2</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 1.049.000</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 1.075</span></p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/compra/compra-item5.jpg" alt="Casa" title="Casa em condomínio" />
+                    </div>
+                    <div class="card-about">
+                        <h4>São Paulo - SP</h4>
+                        <p>Apartamento com Quarto à Venda, 60 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>1</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 399.900</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 640</span></p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item1.jpg" alt="Apartamento" title="Apartamento para Aluguel"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">Recife - PE</p>
-              <p>Apartamento com 3 Quartos para Aluguel, 300 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>4</p>
+        <section id="announcement">
+            <span class="side-title"><h1>Anuncie</h1></span>
+            <div class="announcement-container">
+                <div class="titles-announcement">
+                    <h2>Quer anunciar seu imóvel?</h2>
+                    <p>A Happy House te ajuda a divulgá-lo! :)</p>
                 </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>3</p>
+                <div class="contact-form">
+                    <form>
+                        <p>Entre em contato com a gente!</p>
+                        <div class="data-form">
+                            <label for="nome">Nome: <span>*</span></label>
+                            <input id="nome" type="text" maxlength="50" placeholder="Insira seu Nome" required />
+                        </div>
+
+                        <div class="data-form">
+                            <label for="email">E-mail: <span>*</span></label>
+                            <input id="email" type="email" maxlength="50" placeholder="Insira seu E-mail" required />
+                        </div>
+
+                        <div class="send">
+                            <input type="submit" name="enviar" value="Enviar" />
+                        </div>
+                    </form>
                 </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>2</p>
-                </div>
-              </div>
-              <p><span>R$ 9.950/mês</span></p>
-              <p>Condomíno: <span>R$ 2.180</span></p>
             </div>
-        </div>
+        </section>
 
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item2.jpg" alt="Apartamento" title="Apartamento para Aluguel"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">Florianópolis - SC</p>
-              <p>Apartamento com 2 Quartos para Aluguel, 105 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>3</p>
+        <section id="rent">
+            <span class="side-title"><h1>Alugue</h1></span>
+
+            <div class="rent-property">
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item.jpg" alt="Apartamento" title="Apartamento para Aluguel" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Novo Hamburgo - RJ</h4>
+                        <p>Apartamento com 2 Quartos para Aluguel, 57 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>1</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 1.100/mês</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 254</span></p>
+                    </div>
                 </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item1.jpg" alt="Apartamento" title="Apartamento para Aluguel" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Recife - PE</h4>
+                        <p>Apartamento com 3 Quartos para Aluguel, 300 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>4</span>
+                            <span><i class='bx bxs-hotel'></i>3</span>
+                            <span><i class='bx bxs-car'></i>2</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 9.950/mês</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 2.180</span></p>
+                    </div>
                 </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item2.jpg" alt="Apartamento" title="Apartamento para Aluguel" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Florianópolis - SC</h4>
+                        <p>Apartamento com 2 Quartos para Aluguel, 105 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>3</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 3.200/mês</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 1.090</span></p>
+                    </div>
                 </div>
-              </div>
-              <p><span>R$ 3.200/mês</span></p>
-              <p>Condomíno: <span>R$ 1.090</span></p>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item3.jpg" alt="Apartamento" title="Apartamento para alugar" />
+                    </div>
+                    <div class="card-about">
+                        <h4>São Paulo - SP</h4>
+                        <p>Apartamento com 3 Quartos para aluguel, 103 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>3</span>
+                            <span><i class='bx bxs-hotel'></i>3</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 2.700/mês</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 970</span></p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item4.jpg" alt="Apartamento" title="Apartamento para alugar" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Campina Grande - PB</h4>
+                        <p>Apartamento com 2 Quartos para aluguel, 90 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>2</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 1.100/mês</span></p>
+                        <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 320</span></p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="img/alugar/alugar-item5.jpg" alt="Casa" title="Casa para Aluguel" />
+                    </div>
+                    <div class="card-about">
+                        <h4>Rio de Janeiro - RJ</h4>
+                        <p>Casa com 2 Quartos para aluguel, 60 m²</p>
+                        <div class="rooms">
+                            <span><i class='bx bxs-bath'></i>1</span>
+                            <span><i class='bx bxs-hotel'></i>2</span>
+                            <span><i class='bx bxs-car'></i>1</span>
+                        </div>
+                        <p><i class='bx bx-money'></i><span>R$ 980/mês</span></p>
+                        <!-- <p><i class='bx bxs-purchase-tag-alt'></i>Condomíno: <span>R$ 350</span></p> -->
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item3.jpg" alt="Apartamento" title="Apartamento para alugar"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">São Paulo - SP</p>
-              <p>Apartamento com 3 Quartos para aluguel, 103 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>3</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>3</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 2.700/mês</span></p>
-              <p>Condomíno: <span>R$ 970</span></p>
+        <section class="category-bar">
+            <div class="category"><i class='bx bxs-trophy'></i><p>Qualidade</p></div>
+
+            <div class="category"><i class='bx bx-money-withdraw'></i><p>Preço Acessível</p></div>
+
+            <div class="category"><i class='bx bx-buildings'></i><p>Diversidade</p></div>
+
+            <div class="category"><i class='bx bxs-group'></i><p>Atendimento</p></div>
+        </section>
+
+        <section id="register">
+            <span class="side-title"><h1>Cadastre-se</h1></span>
+            <div class="register-question">
+                <p>Você quer receber ofertas da nossa imobiliária?</p>
             </div>
-        </div>
+            <div class="register-form">
+                <form action="mailto: emanuel.filho@ifpb.edu.br" method="post" enctype="text/plain">
+                    <span class="user-icon"><i class='bx bx-user-circle' style='color:#44a0ff'></i></span>
 
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item4.jpg" alt="Apartamento" title="Apartamento para alugar"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">Campina Grande - PB</p>
-              <p>Apartamento com 2 Quartos para aluguel, 90 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>2</p>
-                </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
-                </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
-                </div>
-              </div>
-              <p><span>R$ 1.100/mês</span></p>
-              <p>Condomíno: <span>R$ 320</span></p>
+                    <div class="data-form">
+                        <label for="nome">Nome: <span>*</span></label>
+                        <input name="nome" id="nome" type="text" maxlength="50" placeholder="Insira seu Nome"
+                            required />
+                    </div>
+
+                    <div class="data-form">
+                        <label for="email">E-mail: <span>*</span></label>
+                        <input name="email" id="email" type="email" maxlength="50" placeholder="Insira seu E-mail"
+                            required required />
+                    </div>
+
+                    <div class="cel-e-tel">
+                        <div class="data-form">
+                            <label for="celular">Celular: <span>*</span></label>
+                            <input name="celular" id="celular" type="tel" maxlength="14" placeholder="(00) 00000-0000"
+                                required />
+                        </div>
+                        <div class="data-form">
+                            <label for="telefone">Telefone: <span>*</span></label>
+                            <input name="telefone" id="telefone" type="tel" maxlength="13" placeholder="(00) 0000-0000"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="cidade-e-uf">
+                        <div class="data-form">
+                            <label for="cidade">Cidade: <span>*</span></label>
+                            <input name="cidade" id="cidade" type="text" maxlength="30" placeholder="Insira sua Cidade"
+                                required />
+                        </div>
+
+                        <div class="data-form">
+                            <label for="uf">UF: <span>*</span></label>
+                            <select name="uf" id="uf" required>
+                                <option value="" disabled selected>UF</option>
+                                <option value="Acre">Acre</option>
+                                <option value="Alagoas">Alagoas</option>
+                                <option value="Amapa">Amapa</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Ceara">Ceara</option>
+                                <option value="Destrito Federal">Destrito Federal</option>
+                                <option value="Espirito Santo">Espirito Santo</option>
+                                <option value="Goias">Goias</option>
+                                <option value="Maranhao">Maranhao</option>
+                                <option value="Mato Grosso">Mato Grosso</option>
+                                <option value="Mato Grosso Sul">Mato Grosso Sul</option>
+                                <option value="Minas Gerais">Minas Gerais</option>
+                                <option value="Para">Para</option>
+                                <option value="Paraiba">Paraiba</option>
+                                <option value="Parana">Parana</option>
+                                <option value="Pernanbuco">Pernanbuco</option>
+                                <option value="Piaui">Piaui</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                <option value="Rondonia">Rondonia</option>
+                                <option value="Roraima">Roraima</option>
+                                <option value="Santa Catarina">Santa Catarina</option>
+                                <option value="Sao Paulo">Sao Paulo</option>
+                                <option value="Sergipe">Sergipe</option>
+                                <option value="Tocantins">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="data-form">
+                        <label for="endereco">Endereço: <span>*</span></label>
+                        <input name="endereco" tyle="text" maxlength="50" placeholder="Insira seu Endereço" required />
+                    </div>
+
+                    <div class="btn-register">
+                        <input type="submit" onclick="return validationForm()" value="Cadastrar" />
+                    </div>
+                </form>
             </div>
-        </div>
+        </section>
 
-        <div class="alugar-item">
-          <div class="img-imovel">
-            <img src="img/alugar/alugar-item5.jpg" alt="Casa" title="Casa para Aluguel"/>
-          </div>
-          <div class="informacoes">
-              <p class="primeira">Rio de Janeiro - RJ</p>
-              <p>Casa com 2 Quartos para aluguel, 60 m²</p>
-              <div class="icon-informacoes">
-                <div class="info-banheiros">
-                  <i class='bx bxs-bath'></i><p>1</p>
+        <section id="news">
+            <span class="side-title"><h1>Notícias</h1></span>
+            <div class="container-news">
+                <div class="text-and-image">
+                    <div class="text-news">
+                        <h3>Apartamentos</h3>
+                        <p>Dono de apartamento em Ipanema rejeita oferta de R$ 50 milhões</p>
+                        <p>Valor inicial pedido para o imóvel no cobiçado Cap Ferrat é de R$ 70 milhões</p>
+                        <div class="see-more">
+                            <button class="btn-see-more" onclick="materiaCopa()">Veja mais</button>
+                        </div>
+                    </div>
+                    <div class="image-news" onclick="newsCopacabana()">
+                        <img src="img/imoveis/lancamento-copa-apart.webp" alt="Dono de apartamento em Ipanema rejeita oferta de R$ 50 milhões"
+                            title="Dono de apartamento em Ipanema rejeita oferta de R$ 50 milhões" />
+                    </div>
                 </div>
-                <div class="info-quartos">
-                  <i class='bx bxs-hotel'></i><p>2</p>
+
+                <div class="text-and-image">
+                    <div class="text-news">
+                        <h3>Terrenos</h3>
+                        <p>Terreno em Vargem Pequena, Rio de Janeiro</p>
+                        <p>Excelente terreno Comercial e Residencial, com 615 m², proxímo ao Recreio.</p>
+                        <div class="see-more">
+                            <button class="btn-see-more" onclick="materiaTerreno()">Veja mais</button>
+                        </div>
+                    </div>
+                    <div class="image-news">
+                        <img src="img/imoveis/terreno.jpg" alt="Terreno Comercial e Residencial"
+                            title="Terreno Comercial e Residencial, com 615 m² em Vargem Pequena, Rio de Janeiro" />
+                    </div>
                 </div>
-                <div class="info-vagas">
-                  <i class='bx bxs-car'></i><p>1</p>
+
+                <div class="text-and-image">
+                    <div class="text-news">
+                        <h3>Casas</h3>
+                        <p>Aluguel de Temporada Praia do Silveira em Garopaba/SC</p>
+                        <p>6 imóveis para alugar em Praia do Silveira</p>
+                        <div class="see-more">
+                            <button class="btn-see-more" onclick="newsTemporada()">Veja mais</button>
+                        </div>
+                    </div>
+                    <div class="image-news">
+                        <img src="img/imoveis/Praia-do-Silvera-alugar.webp" alt="Casas para alugar na Praia do Silveira" title="Casas para alugar na Praia do Silveira" />
+                    </div>
                 </div>
-              </div>
-              <p><span>R$ 980/mês</span></p>
-              <p>Condomíno: <span>R$ 350</span></p>
             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>Copyright © 2022 - <span onclick="scrollToTop()">Happy House</span> :)</p>
+            <p>Desenvolved by <a href="https://www.linkedin.com/in/vitoriabarbosaa" target="_blank">Vitória Barbosa</a></p>
         </div>
-      </div>
-    </section>
-
-    <section class="barra-de-categorias">
-      <div class="categoria">
-        <div>
-          <i class='bx bxs-trophy' style='color:#ffffff'></i>
-          <p>Qualidade</p>
+        <div class="up">
+            <button class="btn-up" onclick="scrollToTop()"><i class='bx bx-up-arrow-alt' ></i></button>
         </div>
-      </div>
-
-      <div class="categoria">
-        <div>
-          <i class='bx bx-money-withdraw' style='color:#ffffff'></i>
-          <p>Preço Acessível</p>
-        </div>
-      </div>
-
-      <div class="categoria">
-        <div>
-          <i class='bx bx-buildings' style='color:#ffffff'></i>
-          <p>Diversidade</p>
-        </div>
-      </div>
-
-      <div class="categoria">
-        <div>
-          <i class='bx bxs-group' style='color:#ffffff'></i>
-          <p>Atendimento</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="cadastre-se">
-      <div class="cadastro-pergunta">
-        <p>Você quer receber ofertas da nossa imobiliária?</p>
-      </div>
-      
-      <div class="titulo-h1">
-        <h1>Cadastre-se</h1>
-      </div>
-
-      <div class="formulario-cadastro">
-        <form action="mailto: emanuel.filho@ifpb.edu.br" method="post" enctype="text/plain">
-          <div class="svg-cadastro">
-            <i class='bx bx-user-circle' style='color:#44a0ff'></i>
-          </div>
-          
-          <div class="form-dados">
-            <label for="nome">Nome: <span>*</span></label>
-            <input name="nome" id="nome" type="text" maxlength="50" placeholder="Insira seu Nome" title="Preencha este campo."/>
-          </div>
-
-          <div class="form-dados">
-            <label for="email">E-mail: <span>*</span></label>
-            <input name="email" id="email" type="email" maxlength="50" placeholder="Insira seu E-mail" title="Preencha este campo." required/>
-          </div>
-
-          <div class="cel-e-tel">
-            <div class="form-dados">
-              <label for="celular">Celular: <span>*</span></label>
-              <input name="celular" id="celular" type="tel" maxlength="14" placeholder="(00)00000-0000" title="Preencha este campo."/>
-            </div>
-                    
-            <div class="form-dados">
-              <label for="telefone">Telefone: <span>*</span></label>
-              <input name="telefone" id="telefone" type="tel" maxlength="13" placeholder="(00)0000-0000" title="Preencha este campo."/>
-            </div>
-          </div>
-
-          <div class="cidade-e-uf">
-            <div class="form-dados">
-              <label for="cidade">Cidade: <span>*</span></label>
-              <input name="cidade" id="cidade" type="text" maxlength="30" placeholder="Insira sua Cidade" title="Preencha este campo."/>
-            </div>
-
-            <div class="form-dados">
-              <label for="uf">UF: <span>*</span></label>
-
-              <select name="uf" id="uf" title="Preencha este campo." required>
-                <option value="" disabled selected>Selecione seu Estado</option>
-                <option value="Acre">Acre</option>
-                <option value="Alagoas">Alagoas</option>
-                <option value="Amapa">Amapa</option>
-                <option value="Amazonas">Amazonas</option>
-                <option value="Bahia">Bahia</option>
-                <option value="Ceara">Ceara</option>
-                <option value="Destrito Federal">Destrito Federal</option>
-                <option value="Espirito Santo">Espirito Santo</option>
-                <option value="Goias">Goias</option>
-                <option value="Maranhao">Maranhao</option>
-                <option value="Mato Grosso">Mato Grosso</option>
-                <option value="Mato Grosso Sul">Mato Grosso Sul</option>
-                <option value="Minas Gerais">Minas Gerais</option>
-                <option value="Para">Para</option>
-                <option value="Paraiba">Paraiba</option>
-                <option value="Parana">Parana</option>
-                <option value="Pernanbuco">Pernanbuco</option>
-                <option value="Piaui">Piaui</option>
-                <option value="Rio de Janeiro">Rio de Janeiro</option>
-                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                <option value="Rondonia">Rondonia</option>
-                <option value="Roraima">Roraima</option>
-                <option value="Santa Catarina">Santa Catarina</option>
-                <option value="Sao Paulo">Sao Paulo</option>
-                <option value="Sergipe">Sergipe</option>
-                <option value="Tocantins">Tocantins</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-dados">
-            <label for="endereco">Endereço: <span>*</span></label>
-            <input name="endereco" tyle="text" maxlength="50" placeholder="Insira seu Endereço" title="Preencha este campo."/>
-          </div>
-
-          <div class="botao-cadastro">
-            <input type="submit" onclick="return validarForm()" value="Cadastrar"/>
-          </div>
-        </form>
-      </div>
-    </section>
-    
-    <section id="noticia">
-      <div class="titulo-h1">
-        <h1>Notícias</h1>
-      </div>
-      
-      <div class="campo-text-img">
-        <div class="text-img">
-          <div class="text-noticia">
-            <h3>Apartamentos</h3>
-            <p>Dono de apartamento em Ipanema rejeita oferta de R$ 50 milhões</p>
-            <p>Valor inicial pedido para o imóvel no cobiçado Cap Ferrat é de R$ 70 milhões</p>
-            <div class="botao-ver-mais">
-              <button class="veja-mais-noticia" onclick="materiaCopa()">Veja mais</button>
-            </div>  
-          </div>
-          <div class="noticia-img" onclick="materiaCopa()">
-            <img src="img/imoveis/lancamento-copa-apart.webp" alt="sla" title="Dono de apartamento em Ipanema rejeita oferta de R$ 50 milhões"/>
-          </div>
-        </div>
-          
-        <div class="text-img">  
-          <div class="text-noticia">
-            <h3>Terrenos</h3>
-            <p>Terreno em Vargem Pequena, Rio de Janeiro</p>
-            <p>Excelente terreno Comercial e Residencial, com 615 m², proxímo ao Recreio.</p>
-            <div class="botao-ver-mais">
-              <button class="veja-mais-noticia" onclick="materiaTerreno()">Veja mais</button>
-            </div>  
-          </div>
-          <div class="noticia-img">
-            <img src="img/imoveis/terreno.jpg" alt="sla" title="Terreno Comercial e Residencial, com 615 m² em Vargem Pequena, Rio de Janeiro"/>
-          </div>
-        </div>
-
-        <div class="text-img">
-          <div class="text-noticia">
-            <h3>Casas</h3>
-            <p>Aluguel de Temporada Praia do Silveira em Garopaba/SC</p>
-            <p>6 imóveis para alugar em Praia do Silveira</p>
-            <div class="botao-ver-mais">
-              <button class="veja-mais-noticia" onclick="materiaCasa()">Veja mais</button>
-            </div>  
-          </div>
-          <div class="noticia-img">
-            <img src="img/imoveis/Praia-do-Silvera-alugar.webp" alt="Casas para alugar na Praia do Silveira" title="Casas para alugar na Praia do Silveira"/>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="copyright">
-      <p>Copyright © 2022 - <span id="refresh">Happy House :)</span></p>
-    </div>
-    <div class="div-topo">
-      <button class="topo" onclick="scrollToTop()">↑</button>
-    </div>
-  </footer>      
-  <script src="script.js"></script>
-  <script src="scroll.js"></script>
+    </footer>
+    <script src="script.js"></script>
+    <script src="scroll.js"></script>
 </body>
+
 </html>

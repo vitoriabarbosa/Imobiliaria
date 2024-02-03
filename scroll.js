@@ -1,4 +1,4 @@
-var menu = document.querySelector(".menu");
+var menu = document.querySelector(".navigation");
 const menuLinks = document.querySelectorAll('a[href^="#"]');
 
 function getDistanceFromTheTop(element) {

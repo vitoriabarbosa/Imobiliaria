@@ -1,0 +1,106 @@
+#releases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    /* background: linear-gradient(#82bfff, #fff); */
+}
+
+/*  Efeito simples de slides  */
+.content {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 70vh;
+    box-shadow: 1px 1px 10px;
+    overflow: hidden;
+}
+
+.nav-slide {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: translate(-2%);
+}
+
+.nav-slide label {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+}
+
+.nav-slide :hover {
+    background: #fff;
+    transition: 0.3s;
+}
+
+.content input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+}
+
+.slide {
+    width: 30%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+}
+
+#slide1:checked~.s1 {
+    margin-left: 0;
+}
+
+#slide2:checked~.s1 {
+    margin-left: -30%;
+}
+
+#slide3:checked~.s1 {
+    margin-left: -60%;
+}
+
+#slide4:checked~.s1 {
+    margin-left: -90%;
+}
+
+.release-information {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.5rem;
+    background: #0000009c;
+    color: #fcfcfc;
+    padding: 1rem;
+}
+
+.slide-about h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.slide-about p {
+    font-size: 1.2rem;
+}
+
+.slide-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
